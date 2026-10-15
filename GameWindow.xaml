@@ -1,0 +1,27 @@
+﻿<Window x:Class="TicTacToeWPF.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Игра" Height="600" Width="600"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Надпись: кто сейчас ходит -->
+        <Label x:Name="TurnLabel"
+               FontSize="20"
+               HorizontalAlignment="Center"
+               Margin="0,0,0,10"
+               Grid.Row="0"
+               Content="Ходит: X"/>
+
+        <!-- Игровое поле -->
+        <UniformGrid x:Name="GameGrid"
+                     Grid.Row="1"
+                     Margin="0"
+                     />
+    </Grid>
+</Window>
